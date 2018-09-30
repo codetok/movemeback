@@ -1,0 +1,24 @@
+/* You can add global styles to this file, and also import other style files */
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+
+
+
+/* sass color variable */
+$colors: (
+  white: #ffffff,
+  black: #070707,
+  bown: #585757,
+  yellow: yellow
+);
+
+@each $key, $value in $colors {
+  #{"[color=" + $key + "]"} {
+    color: $value !important;
+  }
+}
+
+@each $key, $value in $colors {
+  #{"[bgColor=" + $key + "]"} {
+    background: $value !important;
+  }
+}
