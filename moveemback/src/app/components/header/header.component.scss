@@ -1,0 +1,19 @@
+
+.header-nav{
+  border-bottom: 3px solid #459CD7;
+  height: 51px;
+}
+.logo{
+  width: 40px;
+  vertical-align: middle; 
+}
+[mat-button] {
+  &:hover {
+    color: #459CD7 !important;
+  }
+}
+.avtar img{
+  vertical-align: middle;
+  height: 35px;
+  border-radius: 50%;
+}

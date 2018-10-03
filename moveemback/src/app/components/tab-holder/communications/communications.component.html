@@ -1,0 +1,35 @@
+<mat-list *ngIf="!selectedCommunication">
+  <mat-list-item *ngFor="let setting of communication">
+    <h4 mat-line line-title><b>{{setting.title}}</b></h4>
+    <p mat-line class="demo-2">{{setting.introText}} </p>
+    <div class="spacer"></div>
+    <button mat-button (click)="selectedCommunication = setting.settings">Change</button>
+    <mat-icon matListIcon>folder</mat-icon>
+    <mat-divider [inset]="true"></mat-divider>
+  </mat-list-item>
+</mat-list>
+
+<mat-list *ngIf="selectedCommunication">
+  <button *ngIf="selectedCommunication" mat-button (click)="selectedCommunication = undefined" color="green"><< Back to settings</button> 
+  <h4 mat-line line-title><b>{{selectedCommunication.title}}</b></h4>
+  <p>{{selectedCommunication.introText}}</p>
+  <mat-list-item class="offication" *ngFor="let setting of selectedCommunication.options">
+    <h4 mat-line line-title><b>{{setting.title}}</b></h4>
+    <p mat-line class="demo-2">{{setting.introText}} </p>
+    <div class="spacer"></div>
+    <mat-checkbox></mat-checkbox>
+    &nbsp;
+    <!-- <pre>
+        {{selectedCommunication.options|json}}
+    </pre>
+     -->
+    <mat-form-field class="select-width">
+      <mat-select placeholder="Details" >
+          <mat-option *ngFor="let details of setting.details" [value]="details">
+            {{details}}
+          </mat-option>
+      </mat-select>
+    </mat-form-field>
+    
+  </mat-list-item>
+</mat-list>

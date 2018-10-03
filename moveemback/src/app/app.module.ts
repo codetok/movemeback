@@ -3,14 +3,17 @@ import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 import { MaterialSharedModule } from './material.modules';
+import { ComponentsModule } from './components/components.module';
+
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
   ],
   imports: [
     BrowserModule,
-    MaterialSharedModule
+    ComponentsModule,
+    MaterialSharedModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

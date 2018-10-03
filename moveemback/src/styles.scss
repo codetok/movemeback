@@ -8,7 +8,8 @@ $colors: (
   white: #ffffff,
   black: #070707,
   bown: #585757,
-  yellow: yellow
+  yellow: yellow,
+  green: green
 );
 
 @each $key, $value in $colors {

@@ -1,4 +1,5 @@
 import { NgModule } from '@angular/core';
+
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {
   MatAutocompleteModule,
@@ -69,7 +70,7 @@ const BASE_MODULES = [
 ];
 
 @NgModule({
-  imports: [ ...BASE_MODULES, BrowserAnimationsModule ],
+  imports: [ ...BASE_MODULES, BrowserAnimationsModule, ],
   exports: [ ...BASE_MODULES, BrowserAnimationsModule ],
 })
 
