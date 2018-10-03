@@ -1,4 +1,4 @@
-<mat-list *ngIf="!selectedCommunication">
+<mat-list *ngIf="!selectedCommunication" [@enterAnimation]>
   <mat-list-item *ngFor="let setting of communication">
     <h4 mat-line line-title><b>{{setting.title}}</b></h4>
     <p mat-line class="demo-2">{{setting.introText}} </p>
@@ -9,7 +9,7 @@
   </mat-list-item>
 </mat-list>
 
-<mat-list *ngIf="selectedCommunication">
+<mat-list *ngIf="selectedCommunication" [@enterAnimation]>
   <button *ngIf="selectedCommunication" mat-button (click)="selectedCommunication = undefined" color="green"><< Back to settings</button> 
   <h4 mat-line line-title><b>{{selectedCommunication.title}}</b></h4>
   <p>{{selectedCommunication.introText}}</p>
